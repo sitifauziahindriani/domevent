@@ -62,7 +62,7 @@ a{
     justify-content: flex-start;
     align-items: center;
     background-color: #000;
-    padding: 0 10%;
+    padding: 0 40px;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -104,10 +104,20 @@ a{
     background-attachment: fixed;
 }
 .home{
+    display: flex;
+    flex-direction: column;
     background-color: pink;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 20px;
+}
+.home_conten{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
 }
 
 .hiroImage{
@@ -135,11 +145,47 @@ a{
     animation-fill-mode: forwards;
 }
 .about{
-    background-image: url(https://picsum.photos/seed/15/900);
-    flex-direction: column;
-    justify-content: flex-start;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "box1 box2"
+    "box3 box4"
+    ;
 
 }
+.box{
+    padding: 40px;
+    
+
+}
+
+.about_box1{
+    grid-template: box1;
+    background-image: url(https://picsum.photos/seed/197/900);
+    background-size: cover;
+    background-position:center ;
+    border-radius: 0 0 200px 0;
+    background-attachment: fixed;
+}
+
+.about_box2{
+    grid-template: box2;
+}
+.about_box3{
+    grid-template: box3;
+}
+.about_box4{
+    grid-template: box4;
+    grid-template: box1;
+    background-image: url(https://picsum.photos/seed/30/900);
+    background-size: cover;
+    background-position:center ;
+    border-radius: 200px 0 0 0;
+    background-attachment: fixed;
+}
+
+
 .contact{
     background-image: url(https://picsum.photos/seed/17/900);
 }
@@ -223,6 +269,7 @@ border-radius: 20px;
     position: sticky;
     top: 10vh;
     left: 0;
+    z-index: 80;
 
 }
 
