@@ -24,4 +24,15 @@ const hideaboutAlert = () => {
     aboutAlert.style.display = 'none'
 }
 
+//kita akan buat elment HTML
+//menggunakan javascrip
 
+let gallery = document.getElementById('container-gallery')
+let img = 100
+//insert HTML sintak into gallery
+
+for (let i = 0; i < 36; i++) {
+    gallery.innerHTML += `
+    <img src="https://picsum.photos/seed/${img++}/200"/>
+    `
+}

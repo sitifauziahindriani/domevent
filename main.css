@@ -16,7 +16,7 @@ min-height: 100vh;
 padding: 0;
 margin: 0;
 overflow-x: hidden;
-background-color: palevioletred;
+background-color:white;
 user-select: none;
 /* user-select: none; di gunakan agar website kita tidak bisa di drack */
 font-family: 'Roboto', sans-serif;
@@ -190,10 +190,31 @@ a{
     background-image: url(https://picsum.photos/seed/17/900);
 }
 .gallery{
-    background-image: url(https://picsum.photos/seed/16/900);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-gallery{
+    width: 100vw;
+    padding: 20px 40px !important;
+    display: flex;
+    padding: 20px ;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    transition-duration: .5s;
 
+
+}
+
+.container-gallery img{
+    transition-duration:  .5s;
+}
+
+.container-gallery img:hover{
+    border-radius: 200px;
 }
 .galicon{
     font-size: 8rem;
